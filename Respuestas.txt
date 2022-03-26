@@ -1,0 +1,34 @@
+EJERCICIO 1
+	- Cuando se realizan estas acciones, cambia el tipo y id del proceso, se va a numeros similares a '1113'
+	- SystemTap permite a un usuario examinar las actividades del sistema operativo de Linux
+	- Un probe es un evento y su handler correspondiente.
+	- El funcionamiento de SystemTap primero traduce el script a C, corre el compilador de c y crea un modulo kernel a partir de eso
+	- El profiling es un análisis de rendimiento investigando el comportamiento de programa de ordenador. El profiling que se está haciendo es a nivel de sistema
+
+EJERCICIO 2
+	- En c, void indica que no recibe parametros, mientras vacio que recibe n parametros de x tipo
+	- printk es un metodo para imprimir desde kernel, mientras printf imprime a nivel de aplicacion
+	- KERN_INFO accesa a los logs, equivalente a pr_info()
+	- Un goal definition son los targets que un makefile busca actualizar. obj-m hace que el kernel escriba ___.o desde ___.c
+	- Las lineas all: y clean: hacen la compilacion basica de un modulo de kernel
+	- -C nos indica dónde el módulo está ubicado
+	- M es la señal de un build de modulos externos
+	- dmesg muestra mensajes de diagnostico
+	- simple_init carga el módulo de kernel para su uso
+	- simple_exit cierra y remueve el módulo del kernel
+	- Las ventajas de correr codigo de esta forma es la utilidad de modo kernel vs modo usuario
+
+EJERCICIO 3
+	-El fstab es una tabla de configuracion para facilitar mounting y unmounting de file systems
+	-Almacena archivos de configuracion a nivel de componentes del OS como programas y aplicaciones, el equivalente en Windows es system32
+	-/dev contiene archivos especiales o de device; junta todos los dispositivos conectados a la maquina. /dev/disk provee informacion mas detallada sobre dispositivos de almacenamiento
+	-Se utiliza la direccion completa para acceder al dispositivo correcto. udev detecta y gestiona dinamica de diapositivos.
+	-Un block device es un dipositivo de almacenamiento que mueve informacion en bloques. sdxN es la convencion de nombres de discos en Linux.
+	 MBR es el contenedor del primario 'boot loader'. VBR es el primer sector de datos en un dispositivo de almaceniamiento sin estar particionado. UEFI esta encargado de hacer el boot del OS.
+	-Chain loading es un metodo de reemplazo del programa en ejecucion con un nuevo programa.
+	-Root especifica la particion de disco que se utilizara como particion raiz.
+	-vmlinuz es el ejecutable del kernel
+	-LILO se almacena en el MBR, y GRUB unicamente la primera etapa esta en MBR
+	 Un cambio en LILO debe reiniciar el MBR, mientras un cambio en GRUB se lee durante el arranque
+	 GRUB soporta encriptacion de contraseñas MD5, LiLO unicamente texto
+	 GRUB soporta arranque de red, LILO no
